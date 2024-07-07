@@ -1,13 +1,16 @@
 def perform_operation(num1, num2, operation):
-    if operation == 'add':
-        return num1 + num2
-    if operation == 'subtract':
-        return num1 - num2
-    if operation == 'multiply':
-        return num1 * num2
-    if operation == 'divide':
-        if num2 == 0:
-            print("Division by zero is impossible")
-        return num1 / num1
-    else:
-        return "error: invalid operation"
+
+    match operation:
+        case 'add':
+            return num1 + num2
+        case 'subtract':
+            return num1 - num2
+        case 'multiply':
+            return num1 * num2
+        case 'divide':
+            if num2 == 0:
+                return "division by zero is impossible"
+            else:
+                num1 / num2
+        case _:
+            return "enter an operation"
