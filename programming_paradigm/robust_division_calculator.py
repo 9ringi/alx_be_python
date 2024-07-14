@@ -3,7 +3,7 @@ def safe_divide(numerator, denominator):
         numerator = float(numerator)
         denominator = float(denominator)
         result = numerator / denominator
-        return f"The result of the division is {result:.2f}"
+        return f"The result of the division is {result:.1f}"
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
     except ValueError:
@@ -11,6 +11,6 @@ def safe_divide(numerator, denominator):
 
 if __name__ == "__main__":
     # Example usage
-    print(safe_divide(10, 5))  # Expected Output: The result of the division is 2.00
-    print(safe_divide(10, 0))  # Expected Output: Error: Cannot divide by zero.
-    print(safe_divide("ten", 5))  # Expected Output: Error: Please enter numeric values only.
+    print(safe_divide(10, 5))  
+    print(safe_divide(10, 0))  
+    print(safe_divide("ten", 5))  
